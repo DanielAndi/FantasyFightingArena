@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Fighting Arena</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body id="main-body">
+    <div id="start">
+      <button onclick="showMainMenu(3)">Start</button>
+    </div>
+
+    <div id="main-menu" class="hidden">
+      <h1>Fantasy Fighting Arena</h1>
+
+      <button onclick="showStore()">Store</button>
+      <button onclick="showBattle()">Fight</button>
+
+      <div id="stats1">
+        <button onclick="showInventory()">Inventory</button>
+      </div>
+    </div>
+
+    <div id="store" class="hidden">
+      <h2>Store</h2>
+      <div>
+        <h3>Armor</h3>
+        <button
+          id="armor-1"
+          title="Price: 20"
+          onclick="buyItem('Armor', 'armor-1')"
+        >
+          Buy Level 1 Armor
+        </button>
+        <button
+          id="armor-2"
+          title="Price: 40"
+          onclick="buyItem('Armor', 'armor-2')"
+        >
+          Buy Level 2 Armor
+        </button>
+        <button
+          id="armor-3"
+          title="Price: 60"
+          onclick="buyItem('Armor', 'armor-3')"
+        >
+          Buy Level 3 Armor
+        </button>
+      </div>
+      <div>
+        <h3>Weapons</h3>
+        <button
+          id="weapon-1"
+          title="Price: 20"
+          onclick="buyItem('Weapon', 'weapon-1')"
+        >
+          Buy Level 1 Weapon
+        </button>
+        <button
+          id="weapon-2"
+          title="Price: 40"
+          onclick="buyItem('Weapon', 'weapon-2')"
+        >
+          Buy Level 2 Weapon
+        </button>
+        <button
+          id="weapon-3"
+          title="Price: 60"
+          onclick="buyItem('Weapon', 'weapon-3')"
+        >
+          Buy Level 3 Weapon
+        </button>
+      </div>
+      <div>
+        <h3>Potions</h3>
+        <button
+          id="potion-health"
+          title="Price: 10"
+          onclick="buyItem('Potion', 'potion-health')"
+        >
+          Buy Health Potion
+        </button>
+        <button
+          id="potion-damage"
+          title="Price: 10"
+          onclick="buyItem('Potion', 'potion-damage')"
+        >
+          Buy Damage Potion
+        </button>
+      </div>
+      <button onclick="showMainMenu(2)">Back to Main Menu</button>
+    </div>
+
+    <div id="inventory" class="hidden">
+      <h2>Inventory</h2>
+      <div id="stats3"></div>
+      <p id="inventory-list"></p>
+      <button onclick="showMainMenu(0)">Back to Main Menu</button>
+    </div>
+
+    <div id="battle" class="hidden">
+      <h2>Battle</h2>
+
+      <div id="stats2"></div>
+
+      <div id="enemy-stats">
+        <h3>Enemy Stats</h3>
+        <p id="enemy-health"></p>
+        <p id="enemy-armor"></p>
+        <p id="enemy-damage"></p>
+        <p id="enemy-speed"></p>
+      </div>
+
+      <button onclick="attack()">Attack</button>
+
+      <button onclick="usePotion()">Use Potion</button>
+      <div id="potion-dropdown" class="hidden">
+        <select id="potion-select">
+          <option value="" disabled selected>Select a Potion</option>
+        </select>
+        <button onclick="useSelectedPotion()">Use Selected Potion</button>
+      </div>
+
+      <!-- <button onclick="defend()">Defend</button> -->
+      <button onclick="showMainMenu(1)">Back to Main Menu</button>
+    </div>
+
+    <div id="player-stats">
+      <h3>Player Stats</h3>
+      <p id="player-health"></p>
+      <p id="player-armor"></p>
+      <p id="player-damage"></p>
+      <p id="player-speed"></p>
+      <p id="player-level"></p>
+      <p id="player-money"></p>
+    </div>
+
+    <script type="module" src="js/main.js?v=1.0"></script>
+  </body>
+</html>

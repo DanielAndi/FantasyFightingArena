@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #3dbbec;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto;
+    background-color: #001780;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+  }
+  
+
+button:hover {
+    background-color: #120433;
+}
+
+#inventory-list, #character-stats, #enemy-stats {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 300px;
+}
